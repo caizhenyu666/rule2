@@ -77,6 +77,13 @@ struct ContentView: View {
                         .transition(.move(edge: .trailing))
                         .zIndex(1)
                 }
+                
+                // 手电筒界面弹出
+                if selectedTool?.name == "手电筒" {
+                    FlashlightView(onBack: { selectedTool = nil })
+                        .transition(.move(edge: .trailing))
+                        .zIndex(1)
+                }
             }
         }
     }
