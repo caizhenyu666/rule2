@@ -84,6 +84,13 @@ struct ContentView: View {
                         .transition(.move(edge: .trailing))
                         .zIndex(1)
                 }
+                
+                // 汇率换算界面弹出
+                if selectedTool?.name == "汇率换算" {
+                    CurrencyConverterView(onBack: { selectedTool = nil })
+                        .transition(.move(edge: .trailing))
+                        .zIndex(1)
+                }
             }
         }
     }
